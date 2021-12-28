@@ -1,0 +1,167 @@
+// === HERO ===
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    // === SLIDER ===
+    &-slider {
+        &__pagi, .swiper-pagination {
+            bottom: rem(36px);
+
+            &-item {
+                display: inline-block;
+                width: rem(14px);
+                height: rem(14px);
+                background-color: $color-white;
+                border: 2px solid $color-black;
+                border-radius: 50%;
+                cursor: pointer;
+
+                &--active {
+                    background-color: $color-beige;
+                }
+
+                &:not(:last-child) {
+                    margin-right: rem(10px);
+                }
+            }
+        }
+    }
+
+    &-slide {
+        @include flex-Vcenter;
+        justify-content: flex-end;
+        width: 100%;
+        height: calc(100vh - 8.137rem); // FIX!!!
+        min-height: rem(500px);
+        @include background-preset(cover);
+
+        &__descr {
+            margin-top: rem(-32px);
+            padding: rem(15px) rem(23px) rem(19px) rem(29px);
+            color: $color-black;
+            background-color: rgba($color-white, 0.85);
+        }
+
+        &__title {
+            margin-bottom: rem(21px);
+            font-size: $fs-xl;
+            font-style: italic;
+        }
+
+        &__text {
+            max-width: rem(435px);
+            font-size: $fs-l;
+            line-height: 1.35;
+        }
+    }
+    // === / SLIDER ===
+
+    // === BOX ===
+    &-box {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2; // (!)
+        transform: translateY(calc(100% - 28px));
+        transition: transform 0.3s;
+
+        &--open {
+            transform: translateY(0%);
+        }
+
+        &__container {
+            // === MEDIA ===
+            @include tablet {
+                padding: 0;
+            }
+            // === / MEDIA ===
+        }
+
+        &__btn-arrow {
+            display: block;
+            margin: 0 auto;
+            padding: 7px 23px 5px 23px;
+            background-color: $color-white;
+
+            &:hover {
+                background-color: $color-beige;
+            }
+
+            // >>> ICON
+            &::before {
+                content: '';
+                display: block;
+                width: 41px;
+                height: 17px;
+                background-image: url(../img/hero/hero-box-arrow.webp);
+                @include background-preset(contain);
+            }
+
+            &--active {
+                &::before {
+                    transform: rotateX(180deg);
+                }
+            }
+        }
+        
+        // === LIST ===
+        &__list {
+            display: flex;
+
+            // === MEDIA ===
+            @include tablet {
+                flex-direction: column;
+            }
+            // === / MEDIA ===
+        }
+
+        &__item {
+            @include flex-column;
+            flex-basis: 33.333%;
+            padding: rem(10px) rem(20px) rem(10px) rem(15px);
+
+            // >>> ELEMENT
+            &:nth-of-type(3n+1) {
+                color: $color-black;
+                background-color: $color-beige;
+            }
+
+            &:nth-of-type(3n+2) {
+                color: $color-black;
+                background-color: $color-white;
+            }
+
+            &:nth-of-type(3n+3) {
+                color: $color-white;
+                background-color: $color-black;
+            }
+        }
+
+        &__title {
+            margin-bottom: rem(5px);
+            font-size: $fs-xl;
+            line-height: 1.1;
+        }
+
+        &__text {
+            margin: auto 0 rem(13px) 0;
+            font-size: $fs-m;
+            line-height: 1.5;
+        }
+
+        &__link {
+            align-self: flex-end;
+            color: inherit;
+            font-size: $fs-l;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        // === / LIST ===
+    }
+    // === / BOX ===
+}
+// === / HERO ===

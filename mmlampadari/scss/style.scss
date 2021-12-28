@@ -1,0 +1,14 @@
+// === STYLE ===
+@import '_fonts';
+@import '_flex';
+@import '_vars';
+@import '_mixins';
+@import '_settings';
+// === / STYLE ===
+
+// === COMPONENTS ===
+@import 'components/_header';
+@import 'components/_hero';
+@import 'components/_footer';
+@import 'components/_auth';
+// === / COMPONENTS ===

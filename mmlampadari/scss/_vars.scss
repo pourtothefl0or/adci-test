@@ -1,0 +1,31 @@
+// === FUNCTIONS ===
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function rem($num) {
+    @return (strip-unit($num) / 16) * 1rem;
+}
+// === / FUNCTIONS ===
+
+
+// === VARS ===
+// >>> COLORS
+$color-white: #ffffff;
+$color-black: #000000;
+$color-grey-light: #8c8c8c;
+$color-grey-dark: #353436;
+$color-beige: #e2d1a6;
+
+// >>> FONTS
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$fs-xl: rem(30px);
+$fs-l: rem(18px);
+$fs-m: rem(16px);
+$fs-s: rem(14px);
+$fs-xs: rem(12px);
+// === / VARS ===

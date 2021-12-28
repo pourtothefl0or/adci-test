@@ -1,0 +1,76 @@
+// === AUTH ===
+.auth {
+    background-color: $color-grey-dark;
+    
+    &__container {
+        position: relative;
+        padding: rem(8px) rem(78px) rem(16px) rem(78px);
+        width: 100%;
+        height: 100%;
+    }
+    
+    &__btn-close {
+        position: absolute;
+        top: rem(15px);
+        right: rem(15px);
+
+        // >>> ICON
+        &::before {
+            content: '';
+            display: block;
+            width: rem(23px);
+            height: rem(22px);
+            background-image: url(../img/auth/auth-close.webp);
+            @include background-preset(contain);
+        }
+
+        &:hover {
+            &::before {
+                background-image: url(../img/auth/auth-close-hover.webp);
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(20px);
+        font-size: rem(24px);
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        gap: rem(30px) rem(60px);
+    }
+
+    // === COLUMN ===
+    &-column {
+        width: rem(190px);
+
+        &__title {
+            margin-bottom: rem(18px);
+            font-size: $fs-l;
+        }
+    }
+    // === / COLUMN ===
+
+    // === MEDIA ===
+    @include tablet {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: unset;
+
+        &__container {
+            padding: rem(20px);
+            overflow-y: scroll;
+        }
+        
+        &__form {
+            flex-wrap: wrap;
+        }
+    }
+    // === / MEDIA ===
+}
+// === / AUTH ===

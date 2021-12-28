@@ -1,0 +1,30 @@
+/* === Задание 4: === */
+SELECT
+    `trainee`.`name`,
+    `trainee`.`email`,
+    `course`.`name`,
+    `history`.`end`,
+    `history`.`status`
+FROM
+    `history`
+JOIN `trainee` ON `trainee`.`trainee_id` = `history`.`trainee_id`
+JOIN `course` ON `course`.`course_id` = `history`.`course_id`
+WHERE
+	`history`.`end` BETWEEN '20210901' AND '20210930'
+AND
+    `course`.`name` = 'PHP' AND `history`.`status` = '1'
+
+
+/* === Задание 5: === */
+SELECT
+    `course`.`name`,
+    COUNT(`history`.`status`) AS `quantity`
+FROM
+    `history`
+JOIN `course` ON `course`.`course_id` = `history`.`course_id`
+WHERE
+	`history`.`start` BETWEEN '20211001' AND '20211031'
+AND
+    `history`.`status` = '1'
+GROUP BY
+    `course`.`name`

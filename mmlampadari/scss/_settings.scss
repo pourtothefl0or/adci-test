@@ -1,0 +1,168 @@
+// === BASE ===
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+
+    // === MEDIA ===
+    @include minitablet {
+        font-size: 14px;
+    }
+    // === / MEDIA ===
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    color: $color-white;
+    background-color: $color-grey-dark;
+    @include ff-opensans;
+    font-weight: $fw-regular;
+    font-size: $fs-s;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include ff-playfairdisplay;
+}
+// === / BASE ===
+
+
+// === UNI ===
+.container {
+    margin: 0 auto;
+    padding: 0 rem(20px);
+    max-width: 1240px;
+
+    &--fullsize {
+        max-width: 100%;
+    }
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.btn-reset {
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.visually-hidden {
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.form {
+    @include flex-column;
+
+    &-field {
+        padding: rem(9px) rem(5px) rem(5px) rem(5px);
+        width: 100%;
+        @include ff-opensans;
+        font-size: $fs-s;
+        
+        &::placeholder {
+            color: $color-grey-light;
+            font-weight: $fw-light;
+        }
+    }
+    
+    $parent: &;
+    &-fields {
+        #{$parent}-field {
+            &:not(:last-child) {
+                margin-bottom: rem(10px);
+            }
+        }
+    }
+    
+    &-checkbox {
+        width: rem(10px);
+        height: rem(10px);
+    }
+
+    &-accept {
+        align-self: flex-start;
+        margin: rem(5px) 0;
+        cursor: pointer;
+
+        &__text {
+            margin-left: rem(3px);
+            color: $color-white;
+            font-size: rem(10px);
+        }
+
+        $parent: &;
+        &:hover {
+            #{$parent}__text {
+                color: $color-beige;
+            }
+        }
+    }
+
+    &-button {
+        padding: rem(5px) rem(5px) rem(7px) rem(5px);
+        color: $color-white;
+        background-color: $color-black;
+        font-size: $fs-l;
+        text-align: center;
+
+        &:hover {
+            color: $color-black;
+            background-color: $color-beige;
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+
+    &--visible {
+        visibility: visible;
+    }
+
+    &-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3; // (!)
+        width: 100%;
+        height: 100vh;
+        background: rgba($color-white, 0.6);
+        visibility: hidden;
+
+        &--visible {
+            visibility: visible;
+        }
+    }
+}
+// === / UNI ===

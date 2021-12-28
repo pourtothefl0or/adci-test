@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <section class="slider">
+                <div class="slider__header">
+                    <h2 class="slider__header-title">Recently added videos</h2>
+                    <div class="slider__header-btns">
+                        <button class="btn-arrow btn-arrow--prev">
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 7.00001L1.29289 6.2929L0.585785 7.00001L1.29289 7.70712L2 7.00001ZM7.29289 0.292908L1.29289 6.2929L2.70711 7.70712L8.70711 1.70712L7.29289 0.292908ZM1.29289 7.70712L7.29289 13.7071L8.70711 12.2929L2.70711 6.2929L1.29289 7.70712Z" fill="black"/>
+                            </svg>
+                        </button>
+                        <span class="slider__header-pagination"><!-- 1 / 2 --></span>
+                        <button class="btn-arrow btn-arrow--next">
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 7.00001L7.70711 6.2929L8.41421 7.00001L7.70711 7.70712L7 7.00001ZM1.70711 0.292908L7.70711 6.2929L6.29289 7.70712L0.292892 1.70712L1.70711 0.292908ZM7.70711 7.70712L1.70711 13.7071L0.292892 12.2929L6.29289 6.2929L7.70711 7.70712Z" fill="black"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="slider-list-wrapper swiper">
+                    <ul class="slider-list swiper-wrapper">
+                        <!-- SLIDE 1 -->
+                        <li class="slider-list__item swiper-slide">
+                            <a href="#">
+                                <div class="slider-list__item-image">
+                                    <img src="img/slide-1.jpg" class="object-cover" alt="">
+                                    <span class="slider-list__item-prompt slider-list__item-prompt--hover">HOVER FOR DETAILS</span>
+                                    <p class="slider-list__item-prompt slider-list__item-prompt--text">
+                                        «Шрек» (англ. Shrek) — полнометражный анимационный фильм киностудии киностудии Dreamworks Pictures.
+                                    </p>
+                                </div>
+                                <p class="slider-list__item-text">
+                                    «Шрек 1» - Фиона знакомит своего мужа Шрэка с тестем и тещей. Удачный сиквел мультфильма и сатира на светское общество.
+                                </p>
+                            </a>
+                        </li>
+                        <!-- SLIDE 1 -->
+
+                        <!-- SLIDE 2 -->
+                        <li class="slider-list__item swiper-slide">
+                            <a href="#">
+                                <div class="slider-list__item-image">
+                                    <img src="img/slide-2.jpg" class="object-cover" alt="" style="object-position: 50% 25%;">
+                                    <span class="slider-list__item-prompt slider-list__item-prompt--hover">HOVER FOR DETAILS</span>
+                                    <p class="slider-list__item-prompt slider-list__item-prompt--text">
+                                        «Шрек» (англ. Shrek) — полнометражный анимационный фильм киностудии киностудии Dreamworks.
+                                    </p>
+                                </div>
+                                <p class="slider-list__item-text">
+                                    «Шрек 2» - Огр-мизантроп спасает принцессу, чтобы вернуть свое болото. Революционная анимация о том, что красота — внутри.
+                                </p>
+                            </a>
+                        </li>
+                        <!-- SLIDE 2 -->
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
