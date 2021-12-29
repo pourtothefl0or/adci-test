@@ -44,12 +44,14 @@
         }
 
         &__title {
+            margin-top: 0;
             margin-bottom: rem(21px);
             font-size: $fs-xl;
             font-style: italic;
         }
 
         &__text {
+            margin: 0;
             max-width: rem(435px);
             font-size: $fs-l;
             line-height: 1.35;
@@ -140,6 +142,7 @@
         }
 
         &__title {
+            margin-top: 0;
             margin-bottom: rem(5px);
             font-size: $fs-xl;
             line-height: 1.1;

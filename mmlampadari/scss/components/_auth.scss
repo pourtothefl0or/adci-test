@@ -32,6 +32,7 @@
     }
 
     &__title {
+        margin-top: 0;
         margin-bottom: rem(20px);
         font-size: rem(24px);
         text-align: center;
@@ -48,6 +49,7 @@
         width: rem(190px);
 
         &__title {
+            margin-top: 0;
             margin-bottom: rem(18px);
             font-size: $fs-l;
         }

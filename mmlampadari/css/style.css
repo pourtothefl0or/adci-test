@@ -61,13 +61,12 @@ html {
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
 
 body {
+  margin: 0;
   color: #ffffff;
   background-color: #353436;
   font-family: "Open Sans", sans-serif;
@@ -482,12 +481,14 @@ h6 {
 }
 
 .hero-slide__title {
+  margin-top: 0;
   margin-bottom: 1.3125rem;
   font-size: 1.875rem;
   font-style: italic;
 }
 
 .hero-slide__text {
+  margin: 0;
   max-width: 27.1875rem;
   font-size: 1.125rem;
   line-height: 1.35;
@@ -589,6 +590,7 @@ h6 {
 }
 
 .hero-box__title {
+  margin-top: 0;
   margin-bottom: 0.3125rem;
   font-size: 1.875rem;
   line-height: 1.1;
@@ -636,11 +638,13 @@ h6 {
 }
 
 .footer-column__title {
+  margin-top: 0;
   margin-bottom: 1.3125rem;
   font-size: 0.875rem;
 }
 
 .footer-column__text {
+  margin: 0;
   font-size: 0.75rem;
   font-weight: 300;
   line-height: 1.42;
@@ -810,6 +814,7 @@ h6 {
 }
 
 .auth__title {
+  margin-top: 0;
   margin-bottom: 1.25rem;
   font-size: 1.5rem;
   text-align: center;
@@ -830,6 +835,7 @@ h6 {
 }
 
 .auth-column__title {
+  margin-top: 0;
   margin-bottom: 1.125rem;
   font-size: 1.125rem;
 }

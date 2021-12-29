@@ -23,11 +23,13 @@
 
     &-column {
         &__title {
+            margin-top: 0;
             margin-bottom: rem(21px);
             font-size: $fs-s;
         }
 
         &__text {
+            margin: 0;
             font-size: $fs-xs;
             font-weight: $fw-light;
             line-height: 1.42;
